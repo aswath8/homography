@@ -5,10 +5,8 @@ clc;
 %%%%%%%%%%%%%%%%%%
 % Load both images
 %%%%%%%%%%%%%%%%%%
-img1Filename = 'left.jpg';
-img2Filename = 'right.jpg';
-% img1Filename = '../hw3/data/part1/pier/2.JPG';%left.jpg';
-% img2Filename = '../hw3/data/part1/pier/1.JPG';%= 'right.jpg
+img1Filename = '../hw3/data/part1/hill/1.JPG';%left.jpg';
+img2Filename = '../data/part1/hill/2.JPG';%= 'right.jpg
 colorImg1 = imread(img1Filename);
 colorImg2 = imread(img2Filename);
 
@@ -105,7 +103,6 @@ title('Warped image');
 
 % Stitch the images together with the correct overlap
 stitchedCompositeImg = stitch(colorImg1, colorImg2, H);
-imwrite(stitchedCompositeImg,'5.jpg');
 figure, imshow(stitchedCompositeImg);
 title('Alignment by homography');
 

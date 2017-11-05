@@ -3,7 +3,7 @@ function [ r1, c1, r2, c2 ] = detect_features( grayImg1, grayImg2 )
 %   Detailed explanation goes here
 
     %use harris corner detector
-    points1 = detectHarrisFeatures(grayImg1);
+    points1 = detectHarrisFeatures(2);
     points2 = detectHarrisFeatures(grayImg2);
 
     %extract the pixel locations from the features
