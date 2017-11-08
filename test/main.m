@@ -7,8 +7,8 @@ clc;
 %%%%%%%%%%%%%%%%%%
 img1Filename = 'left.jpg';
 img2Filename = 'right.jpg';
-% img1Filename = '../hw3/data/part1/pier/2.JPG';%left.jpg';
-% img2Filename = '../hw3/data/part1/pier/1.JPG';%= 'right.jpg
+% img1Filename = '../hw3/data/part1/pier/2.JPG';
+% img2Filename = '../hw3/data/part1/pier/1.JPG';
 colorImg1 = imread(img1Filename);
 colorImg2 = imread(img2Filename);
 

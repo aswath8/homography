@@ -1,6 +1,4 @@
 function [ featDescriptions ] = describe_features( img, radius, r, c )
-%DESCRIBE_FEATURES Summary of this function goes here
-%   Detailed explanation goes here
 
     numFeat = length(r); %number of features
     featDescriptions = zeros(numFeat, (2 * radius + 1)^2);
@@ -15,9 +13,7 @@ function [ featDescriptions ] = describe_features( img, radius, r, c )
 
     %Extract the neighborhoods around the found features
     for i = 1 : numFeat
-        %Determine the rows and cols that will make up the neighorhood around
-        %the feature. Recall that the padding has offset the indices of the 
-        %features in the img.. so now, the indices held in r,c can be used as 
+        % the indices held in r,c can be used as 
         %the top left corner of the neighborhood rather than its center
         rowRange = r(i) : r(i) + 2 * radius;
         colRange = c(i) : c(i) + 2 * radius;

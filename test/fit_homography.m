@@ -1,5 +1,4 @@
 function H = fit_homography(pts1_homogenous, pts2_homogenous)
-%FIT_HOMOGRAPHY Summary of this function goes here
 
     if size(pts1_homogenous) ~= size(pts2_homogenous)
         error('Number of matched features in the subset supplied to fit_homography does not match for both images')

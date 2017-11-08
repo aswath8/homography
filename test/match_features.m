@@ -1,7 +1,4 @@
 function [ img1Feature_idx, img2Feature_idx ] = match_features( numMatches, featDescriptions1, featDescriptions2)
-%MATCH_FEATURES Summary of this function goes here
-%   Detailed explanation goes here
-
     %determine the dist between every pair of features between images
     %(ie: every combination of 1 feature from img1 and 1 feature from img2)
     distances = dist2(featDescriptions1, featDescriptions2);

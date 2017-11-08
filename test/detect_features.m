@@ -1,23 +1,10 @@
 function [ r1, c1, r2, c2 ] = detect_features( grayImg1, grayImg2 )
-%DETECT_FEATURES Summary of this function goes here
-%   Detailed explanation goes here
-
-    %use harris corner detector
-    points1 = detectHarrisFeatures(2);
-    points2 = detectHarrisFeatures(grayImg2);
-
-    %extract the pixel locations from the features
-    [r1, c1] = deal( zeros(length(points1),1) );
-    [r2, c2] = deal( zeros(length(points2),1) );
-    for i = 1: length(points1)
-        cornerLoc = points1(i).Location;
-        r1(i) = round(cornerLoc(2));
-        c1(i) = round(cornerLoc(1));
-    end
-    for i = 1: length(points2)
-        cornerLoc = points2(i).Location;
-        r2(i) = round(cornerLoc(2));
-        c2(i) = round(cornerLoc(1));
-    end
+%use harris corner detector
+    sigma = 2;
+    thresh = 0.05;
+    radius = 2;
+    disp = 5;
+    [~, r1, c1] = harris(grayImg1, sigma, thresh, radius, disp);
+    [~, r2, c2] = harris(grayImg2, sigma, thresh, radius, disp);
 end
 

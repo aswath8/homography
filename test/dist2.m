@@ -25,4 +25,5 @@ function n2 = dist2(x, c)
     % Rounding errors occasionally cause negative entries in n2
     if any(any(n2<0))
       n2(n2<0) = 0;
+    end
 end
