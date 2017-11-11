@@ -1,20 +1,20 @@
 clear all; clc;
 plotOverlay = true;
 bShouldNormalizePts = true;
-groundTruth = false; % Whether or not to assume all matches are true
+groundTruth = true; % Whether or not to assume all matches are true
 
 % load images 
- I1 = imread('../../hw3/data/part2/house1.jpg');
- I2 = imread('../../hw3/data/part2/house2.jpg');
-% I1 = imread('../../hw3/data/part2/library1.jpg');
-% I2 = imread('../../hw3/data/part2/library2.jpg');
+%  I1 = imread('../data/part2/house1.jpg');
+%  I2 = imread('../data/part2/house2.jpg');
+I1 = imread('../data/part2/library1.jpg');
+I2 = imread('../data/part2/library2.jpg');
 
 %Load match files for the first example
 % This is a N x 4 file where the first two numbers of each row
 % are coordinates of corners in the first image and the last two
 % are coordinates of corresponding corners in the second image: 
- matches = load('../../hw3/data/part2/house_matches.txt'); 
-% matches = load('../../hw3/data/part2/library_matches.txt');
+%  matches = load('../data/part2/house_matches.txt'); 
+matches = load('../data/part2/library_matches.txt');
 
 
 numMatches = size(matches,1);
@@ -80,12 +80,12 @@ line([pt1(:,1) pt2(:,1)]', [pt1(:,2) pt2(:,2)]', 'Color', 'g');
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %load the camera matrices and determine the camera centers
-camMatrix1 = load('../../hw3/data/part2/house1_camera.txt');
-% camMatrix1 = load('../../hw3/data/part2/library1_camera.txt');
+% camMatrix1 = load('../data/part2/house1_camera.txt');
+camMatrix1 = load('../data/part2/library1_camera.txt');
 camCenter1 = get_cam_center(camMatrix1);
 
- camMatrix2 = load('../../hw3/data/part2/house2_camera.txt');
-% camMatrix2 = load('../../hw3/data/part2/library2_camera.txt');
+%  camMatrix2 = load('../data/part2/house2_camera.txt');
+camMatrix2 = load('../data/part2/library2_camera.txt');
 camCenter2 = get_cam_center(camMatrix2);
 
 %homogenize the coordinates

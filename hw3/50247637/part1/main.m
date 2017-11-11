@@ -5,10 +5,8 @@ clc;
 %%%%%%%%%%%%%%%%%%
 % Load both images
 %%%%%%%%%%%%%%%%%%
-img1Filename = 'left.jpg';
-img2Filename = 'right.jpg';
-% img1Filename = '../hw3/data/part1/pier/2.JPG';
-% img2Filename = '../hw3/data/part1/pier/1.JPG';
+img1Filename = '../data/part1/uttower/left.jpg';
+img2Filename = '../data/part1/uttower/right.jpg';
 colorImg1 = imread(img1Filename);
 colorImg2 = imread(img2Filename);
 
